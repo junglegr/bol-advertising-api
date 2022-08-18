@@ -6,15 +6,15 @@ use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\ConnectException as GuzzleConnectException;
-use Coralion\BolAdvertiserV7\Exception\RateLimitException;
-use Coralion\BolAdvertiserV7\Exception\ServerException;
-use Coralion\BolAdvertiserV7\Model\AbstractModel;
-use Coralion\BolAdvertiserV7\Exception\AuthenticationException;
-use Coralion\BolAdvertiserV7\Exception\ConnectException;
-use Coralion\BolAdvertiserV7\Exception\Exception;
-use Coralion\BolAdvertiserV7\Exception\ResponseException;
-use Coralion\BolAdvertiserV7\Exception\UnauthorizedException;
-use Coralion\BolAdvertiserV7\OpenApi\ModelCreator;
+use Coralion\BolAdvertisingV7\Exception\RateLimitException;
+use Coralion\BolAdvertisingV7\Exception\ServerException;
+use Coralion\BolAdvertisingV7\Model\AbstractModel;
+use Coralion\BolAdvertisingV7\Exception\AuthenticationException;
+use Coralion\BolAdvertisingV7\Exception\ConnectException;
+use Coralion\BolAdvertisingV7\Exception\Exception;
+use Coralion\BolAdvertisingV7\Exception\ResponseException;
+use Coralion\BolAdvertisingV7\Exception\UnauthorizedException;
+use Coralion\BolAdvertisingV7\OpenApi\ModelCreator;
 use Psr\Http\Message\ResponseInterface;
 
 class BaseClient
