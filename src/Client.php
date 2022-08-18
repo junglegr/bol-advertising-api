@@ -19,7 +19,7 @@ class Client extends BaseClient
      */
     public function getAssortments(?int $page = 1): array
     {
-        $url = "r/assortments";
+        $url = "assortments";
         $options = [
             'query' => [
                 'page' => $page,
@@ -48,7 +48,7 @@ class Client extends BaseClient
      */
     public function getAdGroupPerformance(string $adGroupId, string $startDate, string $endDate): array
     {
-        $url = "r/sponsored-products/ad-group-performance/${adGroupId}";
+        $url = "sponsored-products/ad-group-performance/${adGroupId}";
         $options = [
             'query' => [
                 'start-date' => $startDate,
@@ -78,7 +78,7 @@ class Client extends BaseClient
      */
     public function getAdGroups(string $campaignId, ?int $page = 1): array
     {
-        $url = "r/sponsored-products/ad-groups";
+        $url = "sponsored-products/ad-groups";
         $options = [
             'query' => [
                 'campaign-id' => $campaignId,
@@ -107,7 +107,7 @@ class Client extends BaseClient
      */
     public function postAdGroup(Model\CreateAdGroupRequest $createAdGroupRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/ad-groups";
+        $url = "sponsored-products/ad-groups";
         $options = [
             'body' => $createAdGroupRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -131,7 +131,7 @@ class Client extends BaseClient
      */
     public function getAdGroupById(string $adGroupId): array
     {
-        $url = "r/sponsored-products/ad-groups/${adGroupId}";
+        $url = "sponsored-products/ad-groups/${adGroupId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -157,7 +157,7 @@ class Client extends BaseClient
      */
     public function putAdGroups(string $adGroupId, Model\UpdateAdGroupRequest $updateAdGroupRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/ad-groups/${adGroupId}";
+        $url = "sponsored-products/ad-groups/${adGroupId}";
         $options = [
             'body' => $updateAdGroupRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -183,7 +183,7 @@ class Client extends BaseClient
      */
     public function getAdvertiserPerformance(string $startDate, string $endDate): array
     {
-        $url = "r/sponsored-products/advertiser-performance";
+        $url = "sponsored-products/advertiser-performance";
         $options = [
             'query' => [
                 'start-date' => $startDate,
@@ -213,7 +213,7 @@ class Client extends BaseClient
      */
     public function getCampaignPerformance(string $campaignId, string $startDate, string $endDate): array
     {
-        $url = "r/sponsored-products/campaign-performance/${campaignId}";
+        $url = "sponsored-products/campaign-performance/${campaignId}";
         $options = [
             'query' => [
                 'start-date' => $startDate,
@@ -242,7 +242,7 @@ class Client extends BaseClient
      */
     public function getCampaigns(?int $page = 1): array
     {
-        $url = "r/sponsored-products/campaigns";
+        $url = "sponsored-products/campaigns";
         $options = [
             'query' => [
                 'page' => $page,
@@ -268,7 +268,7 @@ class Client extends BaseClient
      */
     public function postCampaign(Model\CreateCampaignRequest $createCampaignRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/campaigns";
+        $url = "sponsored-products/campaigns";
         $options = [
             'body' => $createCampaignRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -292,7 +292,7 @@ class Client extends BaseClient
      */
     public function getCampaign(string $campaignId): ?Model\SingleCampaignResponse
     {
-        $url = "r/sponsored-products/campaigns/${campaignId}";
+        $url = "sponsored-products/campaigns/${campaignId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -317,7 +317,7 @@ class Client extends BaseClient
      */
     public function putCampaign(string $campaignId, Model\UpdateCampaignRequest $updateCampaignRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/campaigns/${campaignId}";
+        $url = "sponsored-products/campaigns/${campaignId}";
         $options = [
             'body' => $updateCampaignRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -345,7 +345,7 @@ class Client extends BaseClient
      */
     public function getKeywordPerformance(string $adGroupId, string $startDate, string $endDate): array
     {
-        $url = "r/sponsored-products/keyword-performance/${adGroupId}";
+        $url = "sponsored-products/keyword-performance/${adGroupId}";
         $options = [
             'query' => [
                 'start-date' => $startDate,
@@ -375,7 +375,7 @@ class Client extends BaseClient
      */
     public function getKeywords(string $adGroupId, ?int $page = 1): array
     {
-        $url = "r/sponsored-products/keywords";
+        $url = "sponsored-products/keywords";
         $options = [
             'query' => [
                 'ad-group-id' => $adGroupId,
@@ -402,7 +402,7 @@ class Client extends BaseClient
      */
     public function createKeyword(Model\CreateKeywordRequest $createKeywordRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/keywords";
+        $url = "sponsored-products/keywords";
         $options = [
             'body' => $createKeywordRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -426,7 +426,7 @@ class Client extends BaseClient
      */
     public function getKeyword(string $keywordId): Model\Keyword
     {
-        $url = "r/sponsored-products/keywords/${keywordId}";
+        $url = "sponsored-products/keywords/${keywordId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -450,7 +450,7 @@ class Client extends BaseClient
      */
     public function putKeyword(string $keywordId, float $bid): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/keywords/${keywordId}";
+        $url = "sponsored-products/keywords/${keywordId}";
         $options = [
             'body' => Model\UpdateKeywordRequest::constructFromArray(['bid' => $bid]),
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -474,7 +474,7 @@ class Client extends BaseClient
      */
     public function deleteKeyword(string $keywordId): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/keywords/${keywordId}";
+        $url = "sponsored-products/keywords/${keywordId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -498,7 +498,7 @@ class Client extends BaseClient
      */
     public function getNegativeKeywords(string $adGroupId, ?int $page = 1): array
     {
-        $url = "r/sponsored-products/negative-keywords";
+        $url = "sponsored-products/negative-keywords";
         $options = [
             'query' => [
                 'ad-group-id' => $adGroupId,
@@ -525,7 +525,7 @@ class Client extends BaseClient
      */
     public function postNegativeKeyword(Model\CreateNegativeKeywordRequest $createNegativeKeywordRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/negative-keywords";
+        $url = "sponsored-products/negative-keywords";
         $options = [
             'body' => $createNegativeKeywordRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -549,7 +549,7 @@ class Client extends BaseClient
      */
     public function getNegativeKeyword(string $keywordId): ?Model\NegativeKeyword
     {
-        $url = "r/sponsored-products/negative-keywords/${keywordId}";
+        $url = "sponsored-products/negative-keywords/${keywordId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -573,7 +573,7 @@ class Client extends BaseClient
      */
     public function deleteNegativeKeyword(string $keywordId): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/negative-keywords/${keywordId}";
+        $url = "sponsored-products/negative-keywords/${keywordId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -600,7 +600,7 @@ class Client extends BaseClient
      */
     public function getProductPerformance(string $adGroupId, string $startDate, string $endDate): array
     {
-        $url = "r/sponsored-products/product-performance/${adGroupId}";
+        $url = "sponsored-products/product-performance/${adGroupId}";
         $options = [
             'query' => [
                 'start-date' => $startDate,
@@ -633,7 +633,7 @@ class Client extends BaseClient
      */
     public function getSearchTermPerformance(string $adGroupId, string $startDate, string $endDate): array
     {
-        $url = "r/sponsored-products/search-term-performance/${adGroupId}";
+        $url = "sponsored-products/search-term-performance/${adGroupId}";
         $options = [
             'query' => [
                 'start-date' => $startDate,
@@ -663,7 +663,7 @@ class Client extends BaseClient
      */
     public function getTargetProducts(string $adGroupId, ?int $page = 1): array
     {
-        $url = "r/sponsored-products/target-products";
+        $url = "sponsored-products/target-products";
         $options = [
             'query' => [
                 'ad-group-id' => $adGroupId,
@@ -690,7 +690,7 @@ class Client extends BaseClient
      */
     public function postTargetProducts(Model\CreateTargetProductRequest $createTargetProductRequest): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/target-products";
+        $url = "sponsored-products/target-products";
         $options = [
             'body' => $createTargetProductRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
@@ -714,7 +714,7 @@ class Client extends BaseClient
      */
     public function getTargetProduct(string $targetProductId): Model\TargetProduct
     {
-        $url = "r/sponsored-products/target-products/${targetProductId}";
+        $url = "sponsored-products/target-products/${targetProductId}";
         $options = [
             'produces' => 'application/vnd.advertiser.v7+json',
         ];
@@ -738,7 +738,7 @@ class Client extends BaseClient
      */
     public function updateTargetProduct(Model\UpdateTargetProductRequest $updateTargetProductRequest, string $targetProductId): Model\ProcessStatus
     {
-        $url = "r/sponsored-products/target-products/${targetProductId}";
+        $url = "sponsored-products/target-products/${targetProductId}";
         $options = [
             'body' => $updateTargetProductRequest,
             'produces' => 'application/vnd.advertiser.v7+json',
