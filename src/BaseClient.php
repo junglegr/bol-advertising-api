@@ -1,6 +1,6 @@
 <?php
 
-namespace Coralion\BolRetailerV7;
+namespace Coralion\BolAdvertisingApiV7;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\BadResponseException;
