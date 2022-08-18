@@ -1,12 +1,12 @@
 {
-    "name": "junglegr/bol-advertising-php-client",
+    "name": "junglegr/bol-advertising-api",
     "type": "library",
     "description": "Bol.com Advertising API client",
     "keywords": [
         "junglegr",
-        "bol-advertising-php-client"
+        "bol-advertising-api"
     ],
-    "homepage": "https://github.com/junglegr/bol-advertising-php-client",
+    "homepage": "https://github.com/junglegr/bol-advertising-api",
     "license": "MIT",
     "authors": [
         {
