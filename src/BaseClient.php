@@ -20,9 +20,9 @@ use Psr\Http\Message\ResponseInterface;
 class BaseClient
 {
     protected const API_TOKEN_URI = 'https://login.bol.com/token';
-    protected const API_ENDPOINT = 'https://api.bol.com/retailer/';
-    protected const API_DEMO_ENDPOINT = 'https://api.bol.com/retailer-demo/';
-    protected const API_CONTENT_TYPE_JSON = 'application/vnd.retailer.v7+json';
+    protected const API_ENDPOINT = 'https://api.bol.com/advertiser/';
+    protected const API_DEMO_ENDPOINT = 'https://api.bol.com/advertiser-demo/';
+    protected const API_CONTENT_TYPE_JSON = 'application/vnd.advertiser.v7+json';
 
     /**
      * @var bool Whether request will be sent to the demo endpoint.
