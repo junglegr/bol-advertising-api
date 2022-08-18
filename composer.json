@@ -1,0 +1,32 @@
+{
+    "name": "junglegr/bol-advertising-php-client",
+    "type": "library",
+    "description": "Bol.com Advertising API client",
+    "keywords": [
+        "junglegr",
+        "bol-advertising-php-client"
+    ],
+    "homepage": "https://github.com/junglegr/bol-advertising-php-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JungleGr",
+            "email": "test@test.nl",
+            "homepage": "https://www.nourl.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.1|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.3|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coralion\\BolAdvertisingV7\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
